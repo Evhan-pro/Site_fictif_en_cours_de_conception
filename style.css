@@ -1,0 +1,281 @@
+body {
+    overflow-x: hidden;
+    font-family: "Galgony";
+    src: url("Typo/Galgony.ttf");
+    padding-bottom: 250px;
+}
+
+.Histoire_Celeste ul li {
+    list-style-type: none;
+    position: relative;
+    width: 6px;
+    margin: 0 auto;
+    padding-top: 50px;
+    background: #fff;
+}
+
+.Histoire_Celeste ul li::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) rotate(45deg);
+    width: 20px;
+    height: 20px;
+    z-index: 2;
+    background: #eee;
+    color: white;
+    text-shadow: 0 0 5px #000;
+    font-size: 25px;
+}
+
+.Histoire_Celeste ul li div {
+    position: relative;
+    bottom: 0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.Histoire_Celeste ul li div time {
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    display: flex;
+    letter-spacing: 2px;
+    background-color: transparent;
+    text-shadow: 0 0 5px #000;
+    font-size: 25px;
+    word-break: break-word;
+    font-family: "Galgony";
+}
+
+.photo {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+}
+
+.photo:hover {
+    -webkit-filter: grayscale(150%);
+    filter: grayscale(150%)blur(1.5px);
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+}
+
+.Histoire_Celeste ul li div div {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Histoire_Celeste ul li div div p {
+    text-align: center;
+}
+
+.Histoire_Celeste ul li div .evenement {
+    margin-right: 10px;
+}
+
+.Histoire_Celeste ul li:nth-of-type(odd)>div {
+    left: 45px;
+}
+
+.Histoire_Celeste ul li:nth-of-type(even)>div {
+    left: -439px;
+}
+
+.Histoire_Celeste ul li div {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.Histoire_Celeste ul li:nth-of-type(odd) div {
+    transform: translate3d(100px, -10px, 0) rotate(10deg);
+}
+
+.Histoire_Celeste ul li:nth-of-type(even) div {
+    transform: translate3d(-100px, -10px, 0) rotate(10deg);
+}
+
+.Histoire_Celeste ul li.in-view div {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+}
+
+@media screen and (max-width: 900px) {
+    .Histoire_Celeste ul li div {
+        width: 250px;
+        flex-direction: column;
+    }
+    .Histoire_Celeste ul li div div {
+        width: 80%;
+        margin: 10px;
+    }
+    .Histoire_Celeste ul li:nth-of-type(even)>div {
+        left: -289px;
+    }
+}
+
+
+/*Fond*/
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+.bg1::after {
+    background-image: url("Vidéo/vidéo.mp4");
+}
+
+.bg2::after {
+    background-image: url("Vidéo/vidéo.mp4");
+}
+
+
+/*Fin Fond*/
+
+
+/*Menu*/
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+    border-color: white;
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.liens_header {
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+    font-size: 40px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    /* permet de ne pas faire bouger le texte lors du pass sourie*/
+}
+
+.liens_header:hover {
+    text-decoration: none;
+    color: rgb(180, 180, 180);
+    border-bottom: 2px solid rgb(180, 180, 180);
+}
+
+
+/*Fin Menu*/
+
+
+/*Contenu de la page*/
+
+.section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 0 5px #000;
+    font-size: 70px;
+    font-family: "Galgony";
+    src: url("Typo/Galgony.ttf")
+}
+
+.parallax::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateZ(-1px) scale(1.5);
+    background-size: 100%;
+    z-index: -1;
+}
+
+.Modele {
+    transform: rotate(40deg);
+    opacity: 0.2;
+    padding-right: 350px;
+}
+
+.presentation {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+}
+
+.presentation:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+}
+
+.static {
+    background: rgba(58, 58, 58, .97);
+    overflow: hidden;
+}
+
+
+/*Fin Contenu de la page */
+
+
+/*Typo*/
+
+@font-face {
+    font-family: "Galgony";
+    src: url("Typo/Galgony.ttf")
+}
+
+
+/*Fin Typo*/
+
+
+/*Ecran chargement*/
+
+
+/*histoire*/
+
+.histoire {
+    text-align: center;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 0 5px #000;
+    font-size: 25px;
+    word-break: break-word;
+    font-family: "Galgony";
+    padding: 30px;
+    src: url("Typo/Galgony.ttf")
+}
+
+time {
+    color: white;
+    background-color: black;
+    font-family: "Galgony";
+    src: url("Typo/Galgony.ttf")
+}
+
+
+/*
+mask-image: none;
+
+}
